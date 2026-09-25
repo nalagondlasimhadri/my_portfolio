@@ -413,7 +413,7 @@ function App() {
           <h4>Computer Science & Engineering</h4>
 
           <p>
-            Currently pursuing my bachelor's degree and building a
+            Currently pursuing my bachelor's degree  at audisankara university and building a
             strong foundation in programming, web development,
             databases, and software engineering.
           </p>
