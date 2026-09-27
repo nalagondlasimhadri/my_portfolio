@@ -131,7 +131,7 @@ function App() {
               <ArrowDown size={18} />
             </a>
 
-            <a href="/resume.pdf" className="secondary-button">
+            <a href="./src/assets/Nalagondla-Simhadri_Frontend-Developer.pdf" className="secondary-button">
               Download Resume
               <Download size={18} />
             </a>
