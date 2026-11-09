@@ -131,10 +131,14 @@ function App() {
               <ArrowDown size={18} />
             </a>
 
-            <a href="./src/assets/Nalagondla-Simhadri_Frontend-Developer.pdf" className="secondary-button">
-              Download Resume
-              <Download size={18} />
-            </a>
+            <a
+                href="/resume.pdf"
+                download="Simhadri_Nalagondla_Resume.pdf"
+                className="secondary-button"
+                >
+                Download Resume
+                <Download size={18} />
+                  </a>
 
           </div>
 
@@ -346,11 +350,10 @@ function App() {
       <div className="project-card">
         <div className="project-number">02</div>
 
-        <h3>Web Application</h3>
+        <h3>ML-ChatBot</h3>
 
         <p>
-          A modern web application designed to solve a real-world
-          problem with a clean and user-friendly interface.
+           AceChat –  Academic ML Chatbot :Developed a machine learning-based chatbot & Built an application integrating backend APIs, AI-powered evaluation workflows, structured outputs, and automated reporting.
         </p>
 
         <div className="project-tech">
@@ -358,10 +361,15 @@ function App() {
           <span>CSS</span>
           <span>JavaScript</span>
         </div>
-
-        <a href="#" className="project-link">
-          View Project →
-        </a>
+         
+         <a
+             href="https://ml-chatbot-gilt.vercel.app/"
+             target="_blank"
+             rel="noopener noreferrer"
+             className="project-link"
+             >
+            View Project <span>↗</span>
+</a>
       </div>
 
 
