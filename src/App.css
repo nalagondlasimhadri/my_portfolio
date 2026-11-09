@@ -1177,3 +1177,460 @@ html {
   }
 }
 
+/* =========================================================
+   MOBILE RESPONSIVE PATCH
+   Appended overrides only — desktop styles remain unchanged.
+   ========================================================= */
+
+/* Prevent horizontal overflow and improve mobile scrolling */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+/* Tablet and smaller laptops */
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    min-height: 100svh;
+    gap: 35px;
+    padding: 125px 6% 90px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 680px;
+  }
+
+  .hero-content h1,
+  .hero-content h1 span {
+    font-size: clamp(2.6rem, 7vw, 3.5rem);
+    line-height: 1.12;
+  }
+
+  .hero-content h2,
+  .hero-content h2 span {
+    font-size: clamp(1.7rem, 4.5vw, 2.35rem);
+    line-height: 1.25;
+  }
+
+  .hero-description {
+    max-width: 620px;
+    line-height: 1.75;
+  }
+
+  .hero-image-container {
+    width: min(280px, 72vw);
+    height: min(280px, 72vw);
+  }
+
+  .profile-placeholder {
+    width: min(320px, 82vw);
+    height: min(320px, 82vw);
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .social-links {
+    position: static;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px 0;
+  }
+
+  .about-container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 42px;
+  }
+
+  .about-image-frame {
+    width: min(100%, 420px);
+    height: min(500px, 110vw);
+    margin-inline: auto;
+  }
+
+  .about-content {
+    max-width: 100%;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-container {
+    margin-inline: auto;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .navbar {
+    height: 68px;
+    padding-inline: 5%;
+  }
+
+  .logo {
+    font-size: 23px;
+  }
+
+  .menu-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-links {
+    top: 68px;
+    padding: 8px 5% 16px;
+    max-height: calc(100svh - 68px);
+    overflow-y: auto;
+  }
+
+  .nav-links a {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  .hero {
+    min-height: 100svh;
+    padding: 105px 5% 42px;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .hero-content {
+    gap: 0;
+  }
+
+  .hello {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .hero-content h1,
+  .hero-content h1 span,
+  .hero h1 {
+    font-size: clamp(2.15rem, 10vw, 2.8rem);
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-content h2,
+  .hero-content h2 span,
+  .hero h2 {
+    font-size: clamp(1.35rem, 6.2vw, 1.75rem);
+    line-height: 1.3;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    min-height: 46px;
+    justify-content: center;
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .hero-image-container {
+    width: min(230px, 62vw);
+    height: min(230px, 62vw);
+  }
+
+  .image-glow {
+    width: 75%;
+    height: 75%;
+    filter: blur(55px);
+  }
+
+  .profile-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .profile-placeholder img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .social-links {
+    gap: 5px;
+    margin-top: 0;
+  }
+
+  .social-links a {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .about-section,
+  .skills-section,
+  .projects-section,
+  .education-section {
+    padding: 72px 5%;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .about-content h2,
+  .about-section h2,
+  .skills-section h2,
+  .projects-section h2,
+  .education-section h2 {
+    font-size: clamp(1.85rem, 8vw, 2.35rem);
+    line-height: 1.18;
+    overflow-wrap: anywhere;
+  }
+
+  .about-image-frame {
+    height: min(390px, 105vw);
+    border-radius: 0 0 38px 38px;
+  }
+
+  .about-description,
+  .about-text,
+  .skills-intro,
+  .projects-intro,
+  .education-intro,
+  .contact-intro {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .about-stat {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 14px;
+    padding: 17px;
+  }
+
+  .about-stat-icon {
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    font-size: 21px;
+  }
+
+  .about-stat > div:last-child {
+    min-width: 0;
+  }
+
+  .philosophy-card {
+    gap: 14px;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .philosophy-icon {
+    flex: 0 0 45px;
+    min-width: 45px;
+    height: 45px;
+    font-size: 21px;
+  }
+
+  .philosophy-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .philosophy-card p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .skill-card,
+  .project-card {
+    min-width: 0;
+    padding: 23px;
+    border-radius: 16px;
+  }
+
+  .skill-card h3 {
+    font-size: 18px;
+  }
+
+  .project-card h3 {
+    font-size: 21px;
+  }
+
+  .project-number {
+    margin-bottom: 17px;
+  }
+
+  .project-card p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .project-tech {
+    gap: 7px;
+  }
+
+  .project-tech span {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .education-timeline {
+    padding-left: 27px;
+  }
+
+  .education-timeline::before {
+    left: 5px;
+  }
+
+  .education-dot {
+    left: -28px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .education-card {
+    padding: 21px 18px;
+    border-radius: 15px;
+  }
+
+  .education-card h3 {
+    font-size: 19px;
+    line-height: 1.35;
+  }
+
+  .education-card h4 {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .education-card p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .contact-section {
+    padding: 82px 5%;
+  }
+
+  .contact-section h2 {
+    font-size: clamp(2rem, 9vw, 2.5rem);
+    line-height: 1.15;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .contact-buttons a,
+  .contact-buttons .primary-button,
+  .contact-buttons .secondary-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-details {
+    margin-top: 30px;
+    overflow-wrap: anywhere;
+    font-size: 13px;
+  }
+}
+
+/* Very narrow phones */
+@media (max-width: 360px) {
+  .hero {
+    padding-inline: 4%;
+  }
+
+  .hero-content h1,
+  .hero-content h1 span,
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+  .profile-placeholder {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-section,
+  .skills-section,
+  .projects-section,
+  .education-section,
+  .contact-section {
+    padding-inline: 4%;
+  }
+
+  .philosophy-card {
+    flex-direction: column;
+  }
+}
+
+/* Respect reduced-motion preferences on mobile and desktop */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
